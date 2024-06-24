@@ -3,3 +3,6 @@ fastapi
 pydantic
 transformers[torch,sentencepiece]
 pytest
+
+httpx
+flake8
