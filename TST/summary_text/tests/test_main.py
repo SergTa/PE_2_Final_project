@@ -1,6 +1,5 @@
 from fastapi import FastAPI
 from fastapi.testclient import TestClient
-#from TST.main import app
 app = FastAPI(
     title="Common api"
 )
@@ -17,26 +16,21 @@ def test_get_base_page():
     json_data = response.json()
     assert response.status_code == 200
     assert json_data["message"] == "Welcome to Base Page"
-
 def test_post_eng_text():
     response = client.post("/summary_text/", json={"text": ENG_TXT})
     json_data = response.json()
     assert response.status_code == 200
     assert json_data['Краткое содержание:'] == "This is a test message in English."
-
-
 def test_post_rus_text():
     response = client.post("/summary_text/", json={"text": "Тестовая строка"})
     json_data = response.json()
     assert response.status_code == 200
     assert json_data['Краткое содержание:'] == "Тест теста"
-
 def test_post_empty_string():
     response = client.post("/summary_text/", json={"text": ""})
     json_data = response.json()
     assert response.status_code == 200
     assert json_data['Краткое содержание:'] == "Пустая строка"
-
 def test_error_empty_json():
     response = client.post("/summary_text/", json={})
     json_data = response.json()

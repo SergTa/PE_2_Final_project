@@ -1,6 +1,5 @@
 from fastapi import APIRouter, Depends
 from pydantic import BaseModel
-
 from TST.summary_text.src.model import load_model
 
 router = APIRouter(
@@ -11,14 +10,12 @@ router = APIRouter(
 
 class Item(BaseModel):
     text: str
-
 @router.get("/")
 async def base_page():
     """
     Возвращает приветственное сообщение
     """
     return {"message": "Welcome to Base Page"}
-
 @router.post("/")
 async def summary_text(
         item: Item,

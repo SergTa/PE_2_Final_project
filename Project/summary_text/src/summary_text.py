@@ -2,22 +2,17 @@ from base64 import b64encode
 
 import streamlit as st
 from chardet import detect
-import torch
 from transformers import (
     AutoTokenizer,
     AutoModelForSeq2SeqLM,
-    AutoProcessor,
     pipeline,
 )
-
-
 @st.cache_data
 def get_base64(file: str) -> str:
     # загрузка файла в base64 для streamlit
     with open(file, "rb") as f:
         data = f.read()
     return b64encode(data).decode()
-
 @st.cache_resource
 def load_summary_model():
     # создание кэшированных объектов модели и токенайзера
@@ -27,13 +22,10 @@ def load_summary_model():
 
     # загружаем\получаем из кэша объект pipeline с моделью
     return pipeline("summarization", model=model, tokenizer=tokenizer)
-
-
 @st.cache_resource
 def detect_encoding(data: bytes) -> str:
     # определение кодировки символов
     return detect(data)["encoding"]
-
 def main():
     # загружаем предварительно обученную модель summary
     summary_text = load_summary_model()
@@ -80,8 +72,6 @@ def main():
                     encoding=encoding,
                     errors="ignore",
                 )
-
-
         if st.session_state["text"]:
             st.session_state["text"] = st.text_area(
                 label="Проверьте и отредактируйте текст:",
