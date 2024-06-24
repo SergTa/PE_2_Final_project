@@ -12,7 +12,7 @@ client = TestClient(app)
 
 
 def test_get_base_page():
-    response = client.get("https://summarytextpy-9kn5rcfzhb463uwgjdp5s3.streamlit.app/")
+    response = client.get("/summary_text/")
     json_data = response.json()
     assert response.status_code == 200
     assert json_data["message"] == "Welcome to Base Page"
