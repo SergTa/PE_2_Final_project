@@ -94,7 +94,7 @@ def main():
     set_background("../static/image.png")
 
     # вывод заголовка
-    st.title("Помощник студента")
+    st.title("Краткое содержание текста")
     st.write(
         "Приложение возвращает краткое содержание текста, поддерживает данные "
         "на нескольких языках."
@@ -106,7 +106,7 @@ def main():
         ["Ввод текста", "Загрузка файла"],
         captions=[
             "Вставить текст из буфера или ввести с клавиатуры",
-            "Загрузить файл формата TXT или MP3",
+            "Загрузить файл формата TXT",
         ],
     )
 
@@ -118,7 +118,7 @@ def main():
         # форма для загрузки файла
         uploaded_file = st.file_uploader(
             "Выберите файл",
-            type=["txt", "mp3"],
+            type=["txt"],
             accept_multiple_files=False,
         )
 
@@ -133,13 +133,7 @@ def main():
                     encoding=encoding,
                     errors="ignore",
                 )
-            else:
-                # выводим воспроизведение аудио
-                st.audio(file_bytes)
-                # выводим кнопку "Конвертировать"
-                trans_button = st.button("Конвертировать в текст")
-                if trans_button and file_bytes:
-                    st.session_state["text"] = whisper(file_bytes)["text"]
+
 
         if st.session_state["text"]:
             st.session_state["text"] = st.text_area(
