@@ -6,3 +6,8 @@ pytest
 
 httpx
 flake8
+
+streamlit==1.29.0
+chardet
+accelerate
+librosa
