@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bce518d5-2517-45dc-897e-41dfc72e2fc2" name="Changes" comment="Edit" />
+    <list default="true" id="bce518d5-2517-45dc-897e-41dfc72e2fc2" name="Changes" comment="Edited router">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,17 +16,23 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 0
 }]]></component>
   <component name="ProjectId" id="2iKTesWlEZSoetm43AOyptirgAo" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "node.js.detected.package.eslint": "true",
@@ -50,7 +58,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1719238367344</updated>
-      <workItem from="1719238370378" duration="827000" />
+      <workItem from="1719238370378" duration="2021000" />
     </task>
     <task id="LOCAL-00001" summary="Edit">
       <option name="closed" value="true" />
@@ -68,14 +76,104 @@
       <option name="project" value="LOCAL" />
       <updated>1719238940636</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Edit">
+      <option name="closed" value="true" />
+      <created>1719239278241</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1719239278241</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Edited readme">
+      <option name="closed" value="true" />
+      <created>1719239370982</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1719239370982</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Created main.py">
+      <option name="closed" value="true" />
+      <created>1719239471522</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1719239471522</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Created tests">
+      <option name="closed" value="true" />
+      <created>1719239565513</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1719239565513</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Created model.py">
+      <option name="closed" value="true" />
+      <created>1719239646769</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1719239646769</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Created requirements">
+      <option name="closed" value="true" />
+      <created>1719239693004</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1719239693004</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Created router.py">
+      <option name="closed" value="true" />
+      <created>1719239746295</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1719239746295</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Edited main.py">
+      <option name="closed" value="true" />
+      <created>1719239850197</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1719239850197</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Edited test">
+      <option name="closed" value="true" />
+      <created>1719240013641</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1719240013641</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Edited router">
+      <option name="closed" value="true" />
+      <created>1719240085373</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1719240085373</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Edit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edit" />
+    <MESSAGE value="Edited readme" />
+    <MESSAGE value="Created main.py" />
+    <MESSAGE value="Created tests" />
+    <MESSAGE value="Created model.py" />
+    <MESSAGE value="Created requirements" />
+    <MESSAGE value="Created router.py" />
+    <MESSAGE value="Edited main.py" />
+    <MESSAGE value="Edited test" />
+    <MESSAGE value="Edited router" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edited router" />
   </component>
 </project>
