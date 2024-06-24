@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends
 from pydantic import BaseModel
 
-from PW5.summary_text.src.model import load_model
+from summary_text.src.model import load_model
 
 router = APIRouter(
     prefix="/summary_text",
