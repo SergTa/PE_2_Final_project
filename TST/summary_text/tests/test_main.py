@@ -12,7 +12,7 @@ client = TestClient(app)
 
 
 def test_get_base_page():
-    response = client.get("/summary_text/")
+    response = client.get("http://localhost:8501/")
     json_data = response.json()
     assert response.status_code == 200
     assert json_data["message"] == "Welcome to Base Page"
