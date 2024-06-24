@@ -19,24 +19,6 @@ def get_base64(file: str) -> str:
         data = f.read()
     return b64encode(data).decode()
 
-
-def set_background(file: str) -> None:
-    # установка стилей фона для streamlit
-    bin_str = get_base64(file)
-    page_bg_img = '''
-    <style>
-    [class="appview-container st-emotion-cache-1wrcr25 ea3mdgi4"] {
-    background-image: url("data:image/png;base64,%s");
-    background-size: cover;
-    background-repeat:no-repeat;
-    background-position: center center;
-    }
-    </style>
-    ''' % bin_str
-
-    st.markdown(page_bg_img, unsafe_allow_html=True)
-
-
 @st.cache_resource
 def load_summary_model():
     # создание кэшированных объектов модели и токенайзера
@@ -75,11 +57,9 @@ def load_whisper_model():
         device=device,
     )
 
-
 def detect_encoding(data: bytes) -> str:
     # определение кодировки символов
     return detect(data)["encoding"]
-
 
 def main():
     # загружаем предварительно обученную модель summary
@@ -90,14 +70,10 @@ def main():
     if "text" not in st.session_state:
         st.session_state["text"] = ""
 
-    # загрузка фона
-    set_background("../static/image.png")
-
     # вывод заголовка
     st.title("Краткое содержание текста")
     st.write(
-        "Приложение возвращает краткое содержание текста, поддерживает данные "
-        "на нескольких языках."
+        "Приложение возвращает краткое содержание текста"
     )
 
     # выбор источника данных
@@ -137,13 +113,13 @@ def main():
 
         if st.session_state["text"]:
             st.session_state["text"] = st.text_area(
-                label="Проверьте и при необходимости отредактируйте текст:",
+                label="Проверьте и отредактируйте текст:",
                 value=st.session_state["text"],
             )
 
     # слайдер "Cтепень сжатия результата"
     brevity_level = st.slider(
-        "Cтепень сжатия результата (10 - кратко, 100 - подробно)",
+        "Уровень сжатия результата (10 - кратко, 100 - подробно)",
         min_value=10,
         max_value=100,
         value=50
