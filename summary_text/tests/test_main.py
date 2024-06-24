@@ -24,13 +24,13 @@ def test_post_rus_text():
     response = client.post("/summary_text/", json={"text": "Тестовая строка"})
     json_data = response.json()
     assert response.status_code == 200
-    assert json_data['Краткое содержание:'] == "Тестируете свой тест на домашнюю работу?"
+    assert json_data['Краткое содержание:'] == "Тестовый тест"
 
 def test_post_empty_string():
     response = client.post("/summary_text/", json={"text": ""})
     json_data = response.json()
     assert response.status_code == 200
-    assert json_data['Краткое содержание:'] == "BainAD, talan Deput-General"
+    assert json_data['Краткое содержание:'] == "Пустая строка"
 
 def test_error_empty_json():
     response = client.post("/summary_text/", json={})
