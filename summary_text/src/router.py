@@ -7,18 +7,14 @@ router = APIRouter(
     prefix="/summary_text",
     tags=["SummaryText"]
 )
-
-
 class Item(BaseModel):
     text: str
-
 @router.get("/")
 async def base_page():
     """
     Возвращает приветственное сообщение
     """
     return {"message": "Welcome to Base Page"}
-
 @router.post("/")
 async def summary_text(
         item: Item,
