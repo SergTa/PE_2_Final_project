@@ -1,5 +1,5 @@
 from fastapi.testclient import TestClient
-from main import app
+from PW5.main import app
 
 ENG_TXT = "This is a test message in English this test will test whether the application can generate a summary. If the " \
           "text is short, the application will return it as a summary"
