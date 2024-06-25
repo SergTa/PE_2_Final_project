@@ -1,8 +1,5 @@
-from fastapi import FastAPI
 from fastapi.testclient import TestClient
-app = FastAPI(
-    title="Common api"
-)
+from TST.main import app
 
 
 ENG_TXT = "This is a test message in English this test will test whether the application can generate a summary." \
