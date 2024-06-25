@@ -1,7 +1,9 @@
+# Импорт библиотек
 from transformers import pipeline
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 
 
+# Создание функции, загружающей модель
 def load_model():
     model_name = "csebuetnlp/mT5_multilingual_XLSum"
     model = AutoModelForSeq2SeqLM.from_pretrained(model_name)

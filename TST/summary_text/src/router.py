@@ -1,5 +1,7 @@
+# Импорт библиотек
 from fastapi import APIRouter, Depends
 from pydantic import BaseModel
+# Импорт функции load_model из файла TST\summary_text\src\model.py
 from TST.summary_text.src.model import load_model
 
 router = APIRouter(
