@@ -14,6 +14,7 @@ def test_get_base_page():
     assert response.status_code == 200
     assert json_data["message"] == "Welcome to Base Page"
 
+
 def test_post_eng_text():
     response = client.post("/summary_text/", json={"text": ENG_TXT})
     json_data = response.json()
@@ -27,11 +28,13 @@ def test_post_rus_text():
     assert response.status_code == 200
     assert json_data['Краткое содержание:'] == "Тестируете свой тест на домашнюю работу?"
 
+
 def test_post_empty_string():
     response = client.post("/summary_text/", json={"text": ""})
     json_data = response.json()
     assert response.status_code == 200
     assert json_data['Краткое содержание:'] == "BainAD, talan Deput-General"
+
 
 def test_error_empty_json():
     response = client.post("/summary_text/", json={})
